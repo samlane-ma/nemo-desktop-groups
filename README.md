@@ -23,10 +23,4 @@ This will add a right click option in Nemo file manager on the desktop to group 
 
 To install python-magic:
 
-Make sure pip3 is installed:
-
-`sudo apt install pip3`
-
-And install python-magic
-
 `pip3 install python-magic`
