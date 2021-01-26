@@ -1,0 +1,19 @@
+[Nemo Action]
+
+Name=Group Desktop
+
+Comment=Group the Icons on the Desktop by App
+
+Exec=<appgroup.py --stack>
+
+Icon-Name=folder
+
+Selection=none
+
+Extensions=any;
+
+Conditions=desktop;
+
+EscapeSpaces=true
+
+Terminal=false

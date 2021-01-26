@@ -1,0 +1,19 @@
+[Nemo Action]
+
+Name=UnGroup Desktop
+
+Comment=UnGroup the Icons on the Desktop
+
+Exec=<appgroup.py --unstack>
+
+Icon-Name=folder
+
+Selection=none
+
+Extensions=any;
+
+Conditions=desktop;
+
+EscapeSpaces=true
+
+Terminal=false
