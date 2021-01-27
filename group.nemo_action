@@ -12,7 +12,7 @@ Selection=none
 
 Extensions=any;
 
-Conditions=desktop;
+Conditions=desktop;gsettings org.nemo.desktop desktop-layout s ne 'false::false';
 
 EscapeSpaces=true
 
