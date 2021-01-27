@@ -60,6 +60,8 @@ def get_file_type(file, types):  # types = file_type_by_extension
 
 def create_folders(types):     # types = file_type_by_extension
     for type_ in types:
+        if os.path.isfile(type_):
+            safe_move(type_,type_+'(1)')
         os.makedirs(type_, exist_ok=True)
 
 
