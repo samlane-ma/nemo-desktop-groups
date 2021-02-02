@@ -12,13 +12,6 @@ import os
 import pathlib
 import subprocess
 from sys import argv
-import mimetypes
-
-try:
-    from magic import Magic
-    USE_MAGIC = True
-except ImportError:
-    USE_MAGIC = False
 
 OTHERS = 'Others'
 
@@ -86,12 +79,10 @@ def get_all_installed():
 
 
 def get_folder_name(filename):
-    mime = mimetypes.guess_type(filename)[0]
+    fullname=os.path.join(get_desktop_path(),filename)
+    gfile = Gio.File.new_for_path(filename)
+    mime = gfile.query_info('standard::content-type',0).get_content_type()
     if mime is not None:
-        category = mime.split('/')[0]
-    elif USE_MAGIC:
-        magic = Magic(mime=True)
-        mime = magic.from_file(filename).split('/')[0]
         category = mime.split('/')[0]
     else:
         return OTHERS

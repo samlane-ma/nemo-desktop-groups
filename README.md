@@ -1,5 +1,6 @@
 # nemo-desktop-groups
 Group files in Nemo based on file associations
+
 Author: Sam Lane
 
 Adds Nemo action to group / ungroup desktop items based on the app used to open the file
@@ -19,8 +20,4 @@ to install:
 
 `./install.sh`
 
-This will add a right click option in Nemo file manager on the desktop to group / ungroup files.  Images, videos, and audio will be grouped in their respective folders.  The other files will be grouped according to the application used to open them.  The script attempts to guess the mime type using default libraries.  However, if python-magic is installed, it will increase the accuracy a bit.
-
-To install python-magic:
-
-`pip3 install python-magic`
+Updated: This will now use the exact same method as Nemo to determine mimetype.  As a result, the folder the files are grouped to *should* always match the default application Nemo uses to open the file.
